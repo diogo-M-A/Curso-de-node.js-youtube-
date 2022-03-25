@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 
-
+//.sendFile: envia o arquivo para ser carregado no servidor
+//__dirname: o nome da variável que indica o caminho da pasta root do projeto dentro do pc
 app.get('/', function(req, res){
-    res.send('Seja bem vindo ao meu Servidor');
+    res.sendFile(__dirname + "/html/index.html");
 })
 
 app.get('/sobre', function(req, res){
